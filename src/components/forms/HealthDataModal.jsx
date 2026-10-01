@@ -67,7 +67,7 @@ function HealthDataModal({ isOpen, onClose, onSubmit, editingRecord }) {
             <input
               type="date"
               name="date"
-              value={formData.date}
+              value={form.date}
               onChange={handleChange}
             />
           </label>
@@ -77,7 +77,7 @@ function HealthDataModal({ isOpen, onClose, onSubmit, editingRecord }) {
             <input
               type="number"
               name="calorieIntake"
-              value={formData.calorieIntake}
+              value={form.calorieIntake}
               placeholder="Enter Today's Calorie Intake"
               onChange={handleChange}
             />
@@ -88,7 +88,7 @@ function HealthDataModal({ isOpen, onClose, onSubmit, editingRecord }) {
             <input
               type="number"
               name="calorieBurned"
-              value={formData.calorieBurned}
+              value={form.calorieBurned}
               placeholder="Enter Today's Calorie Burned"
               onChange={handleChange}
             />
@@ -98,7 +98,7 @@ function HealthDataModal({ isOpen, onClose, onSubmit, editingRecord }) {
             Description
             <textarea
               name="description"
-              value={formData.description}
+              value={form.description}
               placeholder="Enter Description"
               onChange={handleChange}
             />
