@@ -1,0 +1,10 @@
+* { box-sizing: border-box; }
+html, body, #root { min-height: 100%; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #202b3b;
+  color: #fff;
+}
+button, input, textarea { font: inherit; }
+button { cursor: pointer; }

@@ -1,0 +1,593 @@
+.page-shell {
+  min-height: 100vh;
+  padding: 40px 30px 60px;
+}
+
+/* Main application container */
+.tracker {
+  width: min(100%, 1200px);
+  min-height: 520px;
+  margin: 0 auto;
+  padding: 18px 18px 40px;
+  background: #373737;
+}
+
+.tracker > h1 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+
+/* =========================
+   TODAY DATA / TRENDS
+========================= */
+
+.today-panel {
+  min-height: 155px;
+
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+
+  gap: 28px;
+  align-items: stretch;
+
+  padding: 16px;
+
+  background: #646464;
+  border-radius: 5px;
+}
+
+
+/* Today card */
+
+.today-card {
+  min-height: 120px;
+
+  padding: 16px;
+
+  background: #a7a7a7;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .22);
+}
+
+.today-card h2 {
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  white-space: nowrap;
+}
+
+.add-button {
+  border: 0;
+  border-radius: 3px;
+
+  padding: 7px 13px;
+
+  background: #42b957;
+  color: #fff;
+
+  font-size: 10px;
+}
+
+.add-button:hover {
+  background: #35a548;
+}
+
+
+/* Today values */
+
+.today-values {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  font-size: 10px;
+  color: #eee;
+}
+
+.no-data-message {
+  align-self: start;
+
+  margin: 7px 0 0;
+
+  color: #303030;
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   WEEKLY TRENDS
+========================= */
+
+.trends-section {
+  min-width: 0;
+
+  padding: 3px 5px;
+}
+
+.trends-section h2,
+.recent-section h2,
+.overall-section h2 {
+  margin: 0 0 10px;
+
+  font-size: 12px;
+
+  font-style: italic;
+  font-weight: 700;
+}
+
+.trends-chart {
+  width: 100%;
+  height: 115px;
+}
+
+
+/* =========================
+   BOTTOM SECTION
+========================= */
+
+.bottom-grid {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 220px;
+
+  gap: 40px;
+
+  margin-top: 18px;
+}
+
+.recent-section,
+.overall-section {
+  min-width: 0;
+}
+
+
+/* Empty state */
+
+.empty-text {
+  margin: 0;
+
+  color: #999;
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   RECENT STATISTICS
+========================= */
+
+.statistics-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.stat-row {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  min-height: 52px;
+
+  padding: 9px 12px;
+
+  background: #fff;
+  color: #333;
+
+  border-radius: 4px;
+
+  font-size: 10px;
+}
+
+.stat-main {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  min-width: 0;
+}
+
+.stat-main strong {
+  font-size: 10px;
+}
+
+.stat-main span,
+.stat-main small {
+  color: #555;
+}
+
+.stat-main small {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  max-width: 500px;
+}
+
+
+/* =========================
+   EDIT / DELETE BUTTONS
+========================= */
+
+.row-actions {
+  display: flex;
+
+  gap: 6px;
+
+  flex-shrink: 0;
+}
+
+.row-actions button {
+  width: 24px;
+  height: 24px;
+
+  display: grid;
+  place-items: center;
+
+  border: 0;
+  border-radius: 3px;
+
+  color: #fff;
+
+  font-size: 9px;
+}
+
+.edit-action {
+  background: #f3a229;
+}
+
+.delete-action {
+  background: #ef5350;
+}
+
+
+/* =========================
+   OVERALL DATA
+========================= */
+
+.overall-section {
+  text-align: left;
+}
+
+.pie-area {
+  width: 100%;
+  height: 150px;
+}
+
+.chart-legend {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: -5px;
+
+  font-size: 9px;
+}
+
+.chart-legend span {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 4px;
+}
+
+.legend-dot {
+  width: 7px;
+  height: 7px;
+
+  display: inline-block;
+}
+
+.legend-dot.intake {
+  background: #8b1cfb;
+}
+
+.legend-dot.burned {
+  background: #f3a229;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-backdrop {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: grid;
+
+  place-items: center;
+
+  padding: 20px;
+
+  background: rgba(255, 255, 255, .76);
+}
+
+.health-modal {
+  width: min(100%, 300px);
+
+  padding: 18px;
+
+  background: #f5f5f5;
+
+  color: #333;
+
+  border-radius: 5px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+}
+
+.health-modal h2 {
+  margin: 0 0 12px;
+
+  font-size: 14px;
+
+  line-height: 1.35;
+
+  text-align: center;
+}
+
+.health-modal form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.health-modal label {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  font-size: 10px;
+}
+
+.health-modal input,
+.health-modal textarea {
+  width: 100%;
+
+  border: 1px solid #ddd;
+
+  border-radius: 3px;
+
+  padding: 7px 8px;
+
+  background: #fff;
+
+  color: #333;
+
+  outline: none;
+
+  font-size: 10px;
+}
+
+.health-modal textarea {
+  resize: vertical;
+}
+
+.health-modal input:focus,
+.health-modal textarea:focus {
+  border-color: #777;
+}
+
+.health-modal label span {
+  color: #e53935;
+
+  font-size: 9px;
+}
+
+
+/* Modal buttons */
+
+.modal-actions {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  margin-top: 7px;
+}
+
+.modal-actions button {
+  border: 0;
+
+  padding: 8px;
+
+  border-radius: 2px;
+
+  color: #fff;
+
+  font-size: 10px;
+}
+
+.submit-button {
+  background: #2196f3;
+}
+
+.cancel-button {
+  background: #f44336;
+}
+
+.submit-button:hover {
+  background: #1976d2;
+}
+
+.cancel-button:hover {
+  background: #d32f2f;
+}
+
+
+/* =========================
+   LARGE SCREENS
+========================= */
+
+@media (min-width: 1400px) {
+  .tracker {
+    width: min(100%, 1300px);
+    min-height: 560px;
+  }
+
+  .today-panel {
+    min-height: 170px;
+
+    grid-template-columns: 220px minmax(0, 1fr);
+
+    gap: 35px;
+  }
+
+  .today-card {
+    min-height: 135px;
+  }
+
+  .trends-chart {
+    height: 130px;
+  }
+
+  .pie-area {
+    height: 170px;
+  }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .page-shell {
+    padding: 25px 18px 45px;
+  }
+
+  .tracker {
+    width: 100%;
+  }
+
+  .today-panel {
+    grid-template-columns: 180px minmax(0, 1fr);
+
+    gap: 20px;
+  }
+
+  .bottom-grid {
+    grid-template-columns: minmax(0, 1fr) 180px;
+
+    gap: 25px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .page-shell {
+    padding: 18px 10px 35px;
+  }
+
+  .tracker {
+    width: 100%;
+
+    padding: 14px;
+  }
+
+  .today-panel {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    padding: 12px;
+  }
+
+  .today-card {
+    min-height: 100px;
+  }
+
+  .trends-chart {
+    height: 150px;
+  }
+
+  .bottom-grid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .overall-section {
+    max-width: 250px;
+
+    margin: 0 auto;
+  }
+
+  .pie-area {
+    height: 180px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px) {
+  .page-shell {
+    padding: 10px;
+  }
+
+  .tracker {
+    padding: 10px;
+  }
+
+  .tracker > h1 {
+    font-size: 13px;
+  }
+
+  .today-panel {
+    padding: 10px;
+  }
+
+  .today-card {
+    min-height: 95px;
+  }
+
+  .stat-row {
+    align-items: flex-start;
+  }
+
+  .stat-main small {
+    max-width: 180px;
+  }
+}
