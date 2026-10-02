@@ -1,1 +1,1 @@
-export const STORAGE_KEY = 'health-fitness-tracker-data';
+export const healthAndFitness = "healthAndFitness";

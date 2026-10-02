@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import Dashboard from './pages/Dashboard';
-import { STORAGE_KEY } from './utils/constants';
+import { healthAndFitness } from './utils/constants';
 
 function loadInitialData() {
   try {
-    const saved = localStorage.getItem(STORAGE_KEY);
+    const saved = localStorage.getItem(healthAndFitness);
     if (!saved) return [];
     const parsed = JSON.parse(saved);
     return Array.isArray(parsed) ? parsed : [];
@@ -17,7 +17,7 @@ function App() {
   const [healthData, setHealthData] = useState(loadInitialData);
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(healthData));
+    localStorage.setItem(healthAndFitness, JSON.stringify(healthData));
   }, [healthData]);
 
   const addHealthData = (data) => {
